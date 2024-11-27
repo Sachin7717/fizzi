@@ -11,15 +11,11 @@ import { View } from "@react-three/drei";
 import Scene from "./Scene";
 import clsx from "clsx";
 
-/**
- * Props for `AlternatingText`.
- */
+
 export type AlternatingTextProps =
   SliceComponentProps<Content.AlternatingTextSlice>;
 
-/**
- * Component for "AlternatingText" Slices.
- */
+
 const AlternatingText = ({ slice }: AlternatingTextProps): JSX.Element => {
   return (
     <Bounded

@@ -9,9 +9,6 @@ import { components } from "@/slices";
 
 type Params = { uid: string };
 
-/**
- * This page renders a Prismic Document dynamically based on the URL.
- */
 
 export async function generateMetadata({
   params,
@@ -49,16 +46,11 @@ export default async function Page({ params }: { params: Params }) {
 export async function generateStaticParams() {
   const client = createClient();
 
-  /**
-   * Query all Documents from the API, except the homepage.
-   */
+ 
   const pages = await client.getAllByType("page", {
     predicates: [prismic.filter.not("my.page.uid", "home")],
   });
 
-  /**
-   * Define a path for every Document.
-   */
   return pages.map((page) => {
     return { uid: page.uid };
   });

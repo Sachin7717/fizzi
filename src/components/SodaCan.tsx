@@ -33,7 +33,7 @@ export function SodaCan({
 
   const labels = useTexture(flavorTextures);
 
-  // Fixes upside down labels
+
   labels.strawberryLemonade.flipY = false;
   labels.blackCherry.flipY = false;
   labels.watermelon.flipY = false;

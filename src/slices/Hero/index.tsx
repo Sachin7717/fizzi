@@ -18,14 +18,9 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-/**
- * Props for `Hero`.
- */
 export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
-/**
- * Component for "Hero" Slices.
- */
+
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   const ready = useStore((state) => state.ready);
   const isDesktop = useMediaQuery("(min-width: 768px)", true);
